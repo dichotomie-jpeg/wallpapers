@@ -11,90 +11,90 @@
         .serif-font { font-family: 'Lora', serif; }
         
         /* Hover-Effekt: Wallpaper blendet aus, Mockup blendet ein */
-        .wallpaper-container img { transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .wallpaper-container img { transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
         .mockup-layer { opacity: 0; }
         .group:hover .mockup-layer { opacity: 1; }
-        .group:hover .wallpaper-layer { opacity: 0.3; }
+        .group:hover .wallpaper-layer { opacity: 0.25; }
 
         .pos-70 { object-position: 70% center; }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="max-w-[95%] mx-auto pt-20 pb-12 px-6 text-center border-b border-zinc-800 mb-16">
-    <h1 class="serif-font text-5xl md:text-6xl font-medium tracking-tight mb-6 text-white">dichotomie.jpeg</h1>
-    <p class="serif-font text-gray-400 italic text-xl md:text-2xl max-w-xl mx-auto leading-relaxed">
-        visual clarity for digital spaces.
-    </p>
-</header>
+    <header class="max-w-[95%] mx-auto pt-24 pb-12 px-4 text-center border-b border-zinc-800 mb-20">
+        <h1 class="serif-font text-5xl md:text-7xl font-medium tracking-tighter mb-6 text-white">dichotomie.jpeg</h1>
+        <p class="serif-font text-zinc-500 italic text-xl md:text-2xl max-w-xl mx-auto leading-relaxed">
+            visual clarity for digital spaces.
+        </p>
+    </header>
 
-    <main class="max-w-6xl mx-auto px-6 pb-24">
-        <section class="mb-16">
-            <div class="flex flex-col md:flex-row justify-between items-baseline mb-12 border-b border-zinc-800 pb-6 text-left">
+    <main class="max-w-[95%] mx-auto px-4 pb-32">
+        <section>
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-16 border-b border-zinc-900 pb-8">
                 <div>
                     <h2 class="serif-font text-2xl font-medium tracking-wide">collection 01</h2>
-                    <p class="text-xs uppercase tracking-widest text-zinc-500 mt-1">Available until April 2026</p>
+                    <p class="text-[9px] uppercase tracking-[0.4em] text-zinc-600 mt-2">Available until April 2026</p>
                 </div>
-                <a href="https://instagram.com/dichotomie.vision" target="_blank" class="hidden md:block text-[10px] uppercase tracking-[0.3em] text-zinc-500 hover:text-white transition-colors">
+                <a href="https://instagram.com/dichotomie.vision" target="_blank" class="hidden md:block text-[9px] uppercase tracking-[0.5em] text-zinc-600 hover:text-white transition-colors">
                     @dichotomie.vision
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 
                 <div class="group">
-                    <div class="wallpaper-container overflow-hidden bg-zinc-900 aspect-[9/16] relative mb-4 border border-zinc-800 cursor-crosshair">
-                        <img src="01-hut-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full opacity-80">
+                    <div class="wallpaper-container overflow-hidden bg-zinc-950 aspect-[9/16] relative mb-6 border border-zinc-900 cursor-crosshair">
+                        <img src="01-hut-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full opacity-70">
                         <img src="01-hut-m.webp" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
-                            <a href="01-hut-b.jpeg" download="Dichotomie_01.jpg" class="bg-white text-black px-6 py-2 text-xs uppercase tracking-widest font-bold hover:bg-zinc-200 transition">Get Image</a>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
+                            <a href="01-hut-b.jpeg" download="Dichotomie_01.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
                         </div>
                     </div>
-                    <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-600">01 — Hut</p>
+                    <p class="text-[9px] uppercase tracking-[0.4em] text-zinc-600">01 — Hut</p>
                 </div>
 
                 <div class="group">
-                    <div class="wallpaper-container overflow-hidden bg-zinc-900 aspect-[9/16] relative mb-4 border border-zinc-800 cursor-crosshair">
-                        <img src="01-path-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-80">
+                    <div class="wallpaper-container overflow-hidden bg-zinc-950 aspect-[9/16] relative mb-6 border border-zinc-900 cursor-crosshair">
+                        <img src="01-path-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-70">
                         <img src="01-path-m.webp" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
-                            <a href="01-path-b.jpeg" download="Dichotomie_02.jpg" class="bg-white text-black px-6 py-2 text-xs uppercase tracking-widest font-bold hover:bg-zinc-200 transition">Get Image</a>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
+                            <a href="01-path-b.jpeg" download="Dichotomie_02.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
                         </div>
                     </div>
-                    <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-600">02 — Path</p>
+                    <p class="text-[9px] uppercase tracking-[0.4em] text-zinc-600">02 — Path</p>
                 </div>
 
                 <div class="group">
-                    <div class="wallpaper-container overflow-hidden bg-zinc-900 aspect-[9/16] relative mb-4 border border-zinc-800 cursor-crosshair">
-                        <img src="01-station-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-80">
+                    <div class="wallpaper-container overflow-hidden bg-zinc-950 aspect-[9/16] relative mb-6 border border-zinc-900 cursor-crosshair">
+                        <img src="01-station-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-70">
                         <img src="01-station-m.webp" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
-                            <a href="01-station-b.jpeg" download="Dichotomie_03.jpg" class="bg-white text-black px-6 py-2 text-xs uppercase tracking-widest font-bold hover:bg-zinc-200 transition">Get Image</a>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
+                            <a href="01-station-b.jpeg" download="Dichotomie_03.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
                         </div>
                     </div>
-                    <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-600">03 — Station</p>
+                    <p class="text-[9px] uppercase tracking-[0.4em] text-zinc-600">03 — Station</p>
                 </div>
 
             </div>
         </section>
     </main>
 
-    <footer class="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-900 text-center">
-        <p class="serif-font italic text-gray-200 mb-8 text-lg">value the project?</p>
-        <div class="flex flex-col items-center gap-8">
-            <a href="https://ko-fi.com/dichotomiejpeg" target="_blank" class="bg-white text-black px-10 py-4 text-xs uppercase tracking-[0.2em] font-bold hover:bg-zinc-200 transition-all">
-                Support with a Coffee
+    <footer class="max-w-[95%] mx-auto px-4 py-24 border-t border-zinc-900 text-center">
+        <p class="serif-font italic text-zinc-400 mb-10 text-xl">value the vision?</p>
+        <div class="flex flex-col items-center">
+            <a href="https://ko-fi.com/dichotomiejpeg" target="_blank" class="border border-white text-white px-12 py-4 text-[10px] uppercase tracking-[0.4em] font-medium hover:bg-white hover:text-black transition-all duration-500">
+                Support via Ko-fi
             </a>
             
-            <div class="mt-8 flex flex-col gap-2">
-                <a href="https://instagram.com/dichotomie.vision" target="_blank" class="text-[10px] uppercase tracking-[0.4em] text-zinc-500 hover:text-white transition-colors">
+            <div class="mt-20 flex flex-col gap-4">
+                <a href="https://instagram.com/dichotomie.vision" target="_blank" class="text-[9px] uppercase tracking-[0.5em] text-zinc-700 hover:text-zinc-400 transition-colors">
                     @dichotomie.vision
                 </a>
-                <p class="text-[9px] uppercase tracking-[0.3em] text-zinc-500">
-                    © 2026 dichotomie.jpeg • <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" class="underline hover:text-zinc-300 transition-colors">CC BY-NC-ND 4.0</a>
+                <p class="text-[8px] uppercase tracking-[0.4em] text-zinc-800">
+                    © 2026 dichotomie.jpeg • <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" class="hover:text-zinc-600 transition-colors">CC BY-NC-ND 4.0</a>
                 </p>
             </div>
         </div>
