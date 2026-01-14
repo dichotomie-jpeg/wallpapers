@@ -11,11 +11,20 @@
         body { background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; }
         .serif-font { font-family: 'Lora', serif; }
         
-        /* Hover-Effekt: Wallpaper blendet aus, Mockup blendet ein */
+        /* Hover-Effekt Desktop & Touch-Support Mobile */
         .wallpaper-container img { transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
         .mockup-layer { opacity: 0; }
+        
+        /* Desktop Hover */
         .group:hover .mockup-layer { opacity: 1; }
         .group:hover .wallpaper-layer { opacity: 0.25; }
+        
+        /* Mobile Tap-Support (Active State) */
+        @media (pointer: coarse) {
+            .group:active .mockup-layer { opacity: 1; }
+            .group:active .wallpaper-layer { opacity: 0.25; }
+            .group:active .absolute { opacity: 1; }
+        }
 
         .pos-70 { object-position: 70% center; }
         
@@ -65,8 +74,8 @@
                         <img src="01-hut-s.webp" alt="dichotomie.jpeg wallpaper collection 01 - Hut" class="wallpaper-layer absolute inset-0 object-cover w-full h-full opacity-70">
                         <img src="01-hut-m.webp" alt="dichotomie.jpeg mockup - Hut" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
-                            <a href="01-hut-b.jpeg" download="Dichotomie_01.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
+                            <a href="01-hut-b.jpeg" download="Dichotomie_01.jpg" class="bg-white text-black px-8 py-3 text-[10px] md:text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
                         </div>
                     </div>
                     <p class="text-[9px] uppercase tracking-[0.4em] text-zinc-600">01 — Hut</p>
@@ -77,8 +86,8 @@
                         <img src="01-path-s.webp" alt="dichotomie.jpeg wallpaper collection 01 - Path" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-70">
                         <img src="01-path-m.webp" alt="dichotomie.jpeg mockup - Path" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
-                            <a href="01-path-b.jpeg" download="Dichotomie_02.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
+                            <a href="01-path-b.jpeg" download="Dichotomie_02.jpg" class="bg-white text-black px-8 py-3 text-[10px] md:text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
                         </div>
                     </div>
                     <p class="text-[9px] uppercase tracking-[0.4em] text-zinc-600">02 — Path</p>
@@ -89,8 +98,8 @@
                         <img src="01-station-s.webp" alt="dichotomie.jpeg wallpaper collection 01 - Station" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-70">
                         <img src="01-station-m.webp" alt="dichotomie.jpeg mockup - Station" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
-                            <a href="01-station-b.jpeg" download="Dichotomie_03.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
+                            <a href="01-station-b.jpeg" download="Dichotomie_03.jpg" class="bg-white text-black px-8 py-3 text-[10px] md:text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
                         </div>
                     </div>
                     <p class="text-[9px] uppercase tracking-[0.4em] text-zinc-600">03 — Station</p>
@@ -121,9 +130,10 @@
     <div id="download-modal">
         <div class="max-w-md w-full p-10 text-center border border-zinc-800 bg-zinc-950">
             <h3 class="serif-font text-2xl mb-4 text-white">thank you.</h3>
-            <p class="text-zinc-400 text-sm leading-relaxed mb-8">
-                I hope these visuals bring some clarity to your space. <br><br>
-                If you enjoy the work, feel free to share a setup of your screen on Instagram 
+            <p class="text-zinc-400 text-sm leading-relaxed mb-8 text-left md:text-center">
+                I hope these visuals bring clarity to your space. <br><br>
+                <span class="text-white">Note:</span> Your download has started. Please check your device's <b>Files</b> or <b>Downloads</b> folder. <br><br>
+                If you enjoy the work, feel free to share your setup on Instagram 
                 <span class="text-white">@dichotomie.vision</span> or consider supporting the project with a coffee.
             </p>
             <div class="flex flex-col gap-4">
@@ -148,7 +158,7 @@
 
         document.querySelectorAll('a[download]').forEach(button => {
             button.addEventListener('click', () => {
-                setTimeout(openModal, 500);
+                setTimeout(openModal, 800);
             });
         });
     </script>
