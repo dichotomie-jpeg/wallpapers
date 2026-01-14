@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dichotomie.jpeg</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        html { scroll-behavior: smooth; }
         body { background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; }
         .serif-font { font-family: 'Lora', serif; }
         
@@ -18,16 +19,22 @@
 
         .pos-70 { object-position: 70% center; }
         
-        /* Pop-up Styles */
-#download-modal {
-    display: none; /* Standardmäßig unsichtbar */
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 100;
-    align-items: center;
-    justify-content: center;
-}
+        /* Pop-up Styles mit sanftem Fade-In */
+        #download-modal {
+            display: none;
+            opacity: 0;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.4s ease;
+        }
+        #download-modal.active {
+            display: flex;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -55,8 +62,8 @@
                 
                 <div class="group">
                     <div class="wallpaper-container overflow-hidden bg-zinc-950 aspect-[9/16] relative mb-6 border border-zinc-900 cursor-crosshair">
-                        <img src="01-hut-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full opacity-70">
-                        <img src="01-hut-m.webp" class="mockup-layer absolute inset-0 object-cover w-full h-full">
+                        <img src="01-hut-s.webp" alt="dichotomie.jpeg wallpaper collection 01 - Hut" class="wallpaper-layer absolute inset-0 object-cover w-full h-full opacity-70">
+                        <img src="01-hut-m.webp" alt="dichotomie.jpeg mockup - Hut" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
                             <a href="01-hut-b.jpeg" download="Dichotomie_01.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
@@ -67,8 +74,8 @@
 
                 <div class="group">
                     <div class="wallpaper-container overflow-hidden bg-zinc-950 aspect-[9/16] relative mb-6 border border-zinc-900 cursor-crosshair">
-                        <img src="01-path-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-70">
-                        <img src="01-path-m.webp" class="mockup-layer absolute inset-0 object-cover w-full h-full">
+                        <img src="01-path-s.webp" alt="dichotomie.jpeg wallpaper collection 01 - Path" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-70">
+                        <img src="01-path-m.webp" alt="dichotomie.jpeg mockup - Path" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
                             <a href="01-path-b.jpeg" download="Dichotomie_02.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
@@ -79,8 +86,8 @@
 
                 <div class="group">
                     <div class="wallpaper-container overflow-hidden bg-zinc-950 aspect-[9/16] relative mb-6 border border-zinc-900 cursor-crosshair">
-                        <img src="01-station-s.webp" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-70">
-                        <img src="01-station-m.webp" class="mockup-layer absolute inset-0 object-cover w-full h-full">
+                        <img src="01-station-s.webp" alt="dichotomie.jpeg wallpaper collection 01 - Station" class="wallpaper-layer absolute inset-0 object-cover w-full h-full pos-70 opacity-70">
+                        <img src="01-station-m.webp" alt="dichotomie.jpeg mockup - Station" class="mockup-layer absolute inset-0 object-cover w-full h-full">
                         
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-[2px]">
                             <a href="01-station-b.jpeg" download="Dichotomie_03.jpg" class="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-200 transition">Get Image</a>
@@ -96,7 +103,7 @@
     <footer class="max-w-[95%] mx-auto px-4 py-24 border-t border-zinc-900 text-center">
         <p class="serif-font italic text-zinc-400 mb-10 text-xl">value the vision?</p>
         <div class="flex flex-col items-center">
-            <a href="https://ko-fi.com/dichotomiejpeg" target="_blank" class="border border-white text-white px-12 py-4 text-[10px] uppercase tracking-[0.4em] font-medium hover:bg-white hover:text-black transition-all duration-500">
+            <a href="https://ko-fi.com/dichotomiejpeg" target="_blank" class="border border-white text-white px-12 py-4 text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-white hover:text-black transition-all duration-500">
                 Support via Ko-fi
             </a>
             
@@ -110,36 +117,40 @@
             </div>
         </div>
     </footer>
-<div id="download-modal">
-    <div class="max-w-md w-full p-10 text-center border border-zinc-800 bg-zinc-950">
-        <h3 class="serif-font text-2xl mb-4">thank you.</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed mb-8">
-            I hope these visuals bring some clarity to your space. <br><br>
-            If you enjoy the work, feel free to share a setup of your screen on Instagram 
-            <span class="text-white">@dichotomie.vision</span> or consider supporting the project with a coffee.
-        </p>
-        <div class="flex flex-col gap-4">
-            <a href="https://ko-fi.com/dichotomiejpeg" target="_blank" class="bg-white text-black px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-zinc-200 transition">Support via Ko-fi</a>
-            <button onclick="closeModal()" class="text-[9px] uppercase tracking-[0.3em] text-zinc-600 hover:text-white transition">Close</button>
+
+    <div id="download-modal">
+        <div class="max-w-md w-full p-10 text-center border border-zinc-800 bg-zinc-950">
+            <h3 class="serif-font text-2xl mb-4 text-white">thank you.</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-8">
+                I hope these visuals bring some clarity to your space. <br><br>
+                If you enjoy the work, feel free to share a setup of your screen on Instagram 
+                <span class="text-white">@dichotomie.vision</span> or consider supporting the project with a coffee.
+            </p>
+            <div class="flex flex-col gap-4">
+                <a href="https://ko-fi.com/dichotomiejpeg" target="_blank" class="bg-white text-black px-6 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-zinc-200 transition">Support via Ko-fi</a>
+                <button onclick="closeModal()" class="text-[9px] uppercase tracking-[0.3em] text-zinc-600 hover:text-white transition">Close</button>
+            </div>
         </div>
     </div>
-</div>
+
     <script>
-    function openModal() {
-        document.getElementById('download-modal').style.display = 'flex';
-    }
+        function openModal() {
+            const modal = document.getElementById('download-modal');
+            modal.style.display = 'flex';
+            setTimeout(() => { modal.classList.add('active'); }, 10);
+        }
 
-    function closeModal() {
-        document.getElementById('download-modal').style.display = 'none';
-    }
+        function closeModal() {
+            const modal = document.getElementById('download-modal');
+            modal.classList.remove('active');
+            setTimeout(() => { modal.style.display = 'none'; }, 400);
+        }
 
-    // Wir binden die Funktion an alle Download-Buttons
-    document.querySelectorAll('a[download]').forEach(button => {
-        button.addEventListener('click', () => {
-            // Kleine Verzögerung, damit der Download-Prozess sauber startet
-            setTimeout(openModal, 500);
+        document.querySelectorAll('a[download]').forEach(button => {
+            button.addEventListener('click', () => {
+                setTimeout(openModal, 500);
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
